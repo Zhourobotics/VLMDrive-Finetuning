@@ -142,8 +142,8 @@ def convert_to_conversation(sample):
 # )
 
 
-converted_dataset = [convert_to_conversation(example) for example in tqdm(dataset.select(range(2500)))]
-converted_eval = [convert_to_conversation(example) for example in tqdm(dataset.select(range(2500,3000)))]
+converted_dataset = [convert_to_conversation(example) for example in tqdm(dataset)]
+converted_eval = [convert_to_conversation(example) for example in tqdm(eval_dataset)]
 
 # converted_eval = eval_dataset.map(convert_to_conversation(sample) for sample in eval_dataset)
 
